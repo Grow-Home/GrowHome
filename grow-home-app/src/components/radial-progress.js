@@ -38,10 +38,10 @@ function CircularProgressWithLabel(props) {
               <img width="70%" src={House2} alt=""/>
           }
           {props.value === 75 &&
-              <img width="60%" src={House3} alt=""/>
+              <img width="70%" src={House3} alt=""/>
           }
           {props.value === 100 &&
-              <img width="60%" src={House4} alt=""/>
+              <img width="70%" src={House4} alt=""/>
           }
       </Box>
     </Box>

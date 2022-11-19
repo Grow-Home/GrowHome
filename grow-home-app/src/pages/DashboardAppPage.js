@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 import React from 'react';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import {Grid, Container, Typography, Box} from '@mui/material';
+import {Grid, Container, Box} from '@mui/material';
 // components
 import Iconify from '../components/iconify';
 // sections
