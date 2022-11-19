@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { faker } from '@faker-js/faker';
+import React from 'react';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Grid, Container, Typography } from '@mui/material';
+import {Grid, Container, Typography} from '@mui/material';
 // components
 import Iconify from '../components/iconify';
 // sections
@@ -17,6 +18,7 @@ import {
   AppCurrentSubject,
   AppConversionRates,
 } from '../sections/@dashboard/app';
+import CircularStatic from "../components/radial-progress";
 
 // ----------------------------------------------------------------------
 
@@ -52,6 +54,8 @@ export default function DashboardAppPage() {
           </Grid>
 
           <Grid item xs={12} md={6} lg={8}>
+              {/* House Building Blocks  */}
+              <CircularStatic/>
             <AppWebsiteVisits
               title="Website Visits"
               subheader="(+43%) than last year"
