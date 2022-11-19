@@ -33,10 +33,13 @@ def market_overview_summary():
 
 @app.route('/createRepaymentPlan')
 def create_repayment_plan():
-    response_API = requests.get(' https://www.interhyp.de/customer-generation/calculator/createRepaymentPlan')
+    with open('DataForRequests/createRepaymentPlan.json') as f:
+        data = json.load(f)
+    print(data)
+    #print(data['caseDto']['venture']['shownFunding']['loans'][5])
+    response_API = requests.post(' https://www.interhyp.de/customer-generation/calculator/createRepaymentPlan', json=data)
     print(response_API.text)
     return response_API.text
-
 
 if __name__ == '__main__':
     app.run()

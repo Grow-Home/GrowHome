@@ -1,5 +1,5 @@
 {
-  "numberOfResults": 0,
+  "numberOfResults": 2,
   "caseDto": {
     "venture": {
       "reason": "KaufNeu",
@@ -10,12 +10,12 @@
         "payoutDate": "2022-11-19",
         "loans": [
           {
-            "amount": 0,
+            "amount": 50000,
             "fullRepayment": true,
             "amortisation": 0,
             "maturity": 0,
-            "desiredTotalTimeInYears": 0,
-            "desiredRepayment": 0
+            "desiredTotalTimeInYears": 5,
+            "desiredRepayment": 80000
           }
         ]
       },
