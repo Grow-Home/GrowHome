@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 import React from 'react';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import {Grid, Container, Typography} from '@mui/material';
+import {Grid, Container, Typography, Box} from '@mui/material';
 // components
 import Iconify from '../components/iconify';
 // sections
@@ -32,9 +32,6 @@ export default function DashboardAppPage() {
       </Helmet>
 
       <Container maxWidth="xl">
-        <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, Welcome back
-        </Typography>
 
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
@@ -53,9 +50,12 @@ export default function DashboardAppPage() {
             <AppWidgetSummary title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={8}>
+          <Grid item xs={12} md={18} lg={14}>
               {/* House Building Blocks  */}
-              <CircularStatic/>
+              <Box sx={{ pl:30 }} >
+                  <CircularStatic/>
+              </Box>
+
             <AppWebsiteVisits
               title="Website Visits"
               subheader="(+43%) than last year"
