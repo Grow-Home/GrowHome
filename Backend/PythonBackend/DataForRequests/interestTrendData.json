@@ -1,0 +1,8 @@
+{
+  "origin": "string",
+  "key": "string",
+  "timeRange": "string",
+  "bindings": [
+    "string"
+  ]
+}
