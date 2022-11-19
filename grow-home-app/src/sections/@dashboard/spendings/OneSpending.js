@@ -12,8 +12,6 @@ import { ColorPreview } from '../../../components/color-utils';
 
 const StyledProductImg = styled('img')({
   top: 0,
-  width: '100%',
-  height: '100%',
   objectFit: 'cover',
   position: 'absolute',
 });
@@ -30,7 +28,7 @@ export default function OneSpending() {
 
   return (
     <Card>
-      <Box sx={{ pt: '100%', width:'100%', position: 'relative' }}>
+      <Box sx={{ position: 'relative' }}>
 
           <Label
             variant="filled"
