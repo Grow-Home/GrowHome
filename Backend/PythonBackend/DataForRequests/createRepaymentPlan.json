@@ -1,0 +1,114 @@
+{
+  "useCustomInterestRate": true,
+  "userInterest": 0,
+  "caseDto": {
+    "venture": {
+      "reason": "KaufNeu",
+      "priceBuilding": 0,
+      "shownFunding": {
+        "equityCash": 0,
+        "additionalPriorityLoan": 0,
+        "payoutDate": "2027-11-19",
+        "loans": [
+          {
+            "amount": 50000,
+            "fullRepayment": true,
+            "amortisation": 1,
+            "maturity": 0,
+            "desiredTotalTimeInYears": 5,
+            "desiredRepayment": 80000
+          }
+        ]
+      },
+      "renovationCost": 0,
+      "percentageBroker": 0,
+      "percentageTax": 0,
+      "percentageNotary": 0,
+      "costsBuilding": 0,
+      "priceLand": 0,
+      "marketValue": 0,
+      "ventureDesc": "string",
+      "brokerCosts": 0,
+      "notaryCosts": 0,
+      "transferTax": 0,
+      "costsBuildingIncidentials": 0,
+      "costsOutside": 0
+    },
+    "estate": {
+      "zip": "string",
+      "city": "string",
+      "federalState": "string",
+      "combiType": "Wohnung",
+      "utilization": "eigen",
+      "construction": "Massiv",
+      "preFabrication": "Normal",
+      "areaTotal": 0,
+      "areaRented": 0,
+      "yearOfConstruction": 0,
+      "numberOfFlatsHouse": 0,
+      "numberOfFlatsApts": 0,
+      "buyTimeline": 0,
+      "buildTimeline": 0
+    },
+    "capital": {
+      "equityCash": 0
+    },
+    "mainApplicant": {
+      "zip": "string",
+      "city": "string",
+      "salutation": "string",
+      "title": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "emailAddress": "string",
+      "telephoneNumber": "string",
+      "acceptMarketing": true,
+      "acceptDvvInformation": true,
+      "jobStatus": "Angest",
+      "netSalary": 0,
+      "password": "string"
+    },
+    "handling": {
+      "preferredProcessor": "string",
+      "branchRequest": "string",
+      "consultationType": "live",
+      "hasRecommender": true,
+      "videoConsulting": true
+    },
+    "origin": {
+      "adChannel": "string",
+      "adCampaign": "string",
+      "adTool": "string",
+      "adKeyword": "string",
+      "creation": "string",
+      "adOptimizely": "string"
+    },
+    "customerId": "string",
+    "calledBy": "string",
+    "partnerId": "string",
+    "companyId": "string",
+    "registration": {
+      "password": "string",
+      "origin": "HOME"
+    },
+    "questionsAndAnswers": [
+      {
+        "sequence": 0,
+        "questionKey": "PROPERTY_FOUND",
+        "answers": [
+          "string"
+        ],
+        "answerDataType": "string"
+      }
+    ],
+    "calculateScore": true,
+    "h-captcha-response": "string"
+  },
+  "specialRepayments": [
+    {
+      "date": "2022-11-19",
+      "amount": 0,
+      "recurringCount": 0
+    }
+  ]
+}
