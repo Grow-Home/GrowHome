@@ -28,20 +28,17 @@ export default function OneSpending() {
 
   return (
     <Card>
-      <Box sx={{ position: 'relative' }}>
-
+      <Box sx={{ position: 'relative',ml: 2  }}>
+          <Box sx={{ position: 'relative',ml: '93%'  }}>
           <Label
             variant="filled"
             color={'info'}
-
-          >
-            Category
+          >Category
           </Label>
-        
-        <p>Hallo</p>
+          </Box>
+          <p>Hallo</p>
       </Box>
 
-   
     </Card>
   );
 }
