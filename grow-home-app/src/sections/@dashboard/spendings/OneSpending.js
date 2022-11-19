@@ -1,12 +1,18 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 // @mui
 import { Box, Card, Link, Typography, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
 // utils
 import { fCurrency } from '../../../utils/formatNumber';
+import SvgColor from '../../../components/svg-color';
+
 // components
 import Label from '../../../components/label';
 import { ColorPreview } from '../../../components/color-utils';
+import Food from '../../../components/images/food.png';
+import Activities from '../../../components/images/activity.png';
+import FixedCosts from '../../../components/images/fixedCosts.png';
 
 // ----------------------------------------------------------------------
 
@@ -19,14 +25,26 @@ const StyledProductImg = styled('img')({
 });
 
 // ----------------------------------------------------------------------
-/*
-OneSpending.propTypes = {
-  product: PropTypes.object,
-};
-//const { name, cover, price, colors, status, priceSale } = product;
-*/
-export default function OneSpending() {
-  
+
+
+export default function OneSpending({product}) {
+  OneSpending.propTypes = {
+        product: PropTypes.object,
+  };
+
+  const { id, cover, name, price, categories, date, colors, status } = product;
+
+  function getIconOfCategory(category){
+    let iconImage = null
+    if (category === "Food"){
+        iconImage =  <img src={Food} alt="Logo" />
+    } else if (category === "Activities"){
+        iconImage = <img src={Activities} alt="Logo" />
+    } else {
+        iconImage = <img src={FixedCosts} alt="Logo" />
+    }
+    return iconImage
+  }
 
   return (
     <Card>
@@ -37,10 +55,11 @@ export default function OneSpending() {
             color={'info'}
 
           >
-            Category
+            {name}
           </Label>
         
-        <p>Hallo</p>
+        <p>{categories}</p>
+        {getIconOfCategory({categories})}
       </Box>
 
    

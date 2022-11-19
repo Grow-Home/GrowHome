@@ -10,10 +10,12 @@ SpendingList.propTypes = {
 };
 
 export default function SpendingList({ products}) {
+
+
   return (
     <Grid container spacing={3} >
       {products.map((product) => (
-        <Grid item xmd={6} xs={12} >
+        <Grid key={product.id}  item xmd={6} xs={12} >
             <OneSpending style={{height: '100%', width: '30px'}} product={product}/>
         </Grid>
           
