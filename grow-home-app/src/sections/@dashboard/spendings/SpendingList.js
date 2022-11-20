@@ -13,9 +13,9 @@ export default function SpendingList({ products}) {
 
 
   return (
-    <Grid container spacing={2} >
+    <Grid container spacing={1} >
       {products.map((product) => (
-        <Grid item xs={12} key={product.id}>
+        <Grid item xs={12}  key={product.id}>
             <OneSpending product={product}/>
         </Grid>
         
