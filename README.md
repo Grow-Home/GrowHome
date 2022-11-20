@@ -12,16 +12,23 @@ we usedthe framework React and build our house Java Script using data provided b
 Finding out how to get the apprpiate properties we needed for our web page . 
 Lack of knowledge in the financial industry. 
 ## Accomplishments that we're proud of
-Having a pretty UI and building house with sammy 
-Managing to have a good team work spirit 
-Pulling in the all nighter to submit a working prototype 
-Having fun and learning something new 
+ Having a pretty UI and building house with sammy. 
+ 
+ Managing to have a good team work spirit .
+ 
+ Pulling in the all nighter to submit a working prototype. 
+ 
+ Having fun and learning something new .
 ## What we learned
 we learned : 
-fast prototyping techniques
-continuous integration 
-splitting the work 
-stress management 
+
+fast prototyping techniques.
+
+continuous integration. 
+
+splitting the work. 
+
+stress management. 
 ## What's next for GrowHome
 GrowHome has a lot of potential . Data can be downloaded automatically from the user 's account and categorized so the user doesn't have to 
 put it manually . There also would be an estimation of when a person will be able to pay for the equity cash based on the infromation provided on their saving . User can also have an investment section where thy can visualise which stocks they invested in and their profit . 
