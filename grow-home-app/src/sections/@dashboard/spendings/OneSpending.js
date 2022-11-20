@@ -1,12 +1,21 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 // @mui
-import { Box, Card, Link, Typography, Stack } from '@mui/material';
+import { Box, Card, Grid, Link, Typography, Stack } from '@mui/material';
 import { styled } from '@mui/material/styles';
 // utils
 import { fCurrency } from '../../../utils/formatNumber';
+import SvgColor from '../../../components/svg-color';
+
 // components
 import Label from '../../../components/label';
 import { ColorPreview } from '../../../components/color-utils';
+import Food from '../../../components/images/food.png';
+import Activities from '../../../components/images/activity.png';
+import FixedCosts from '../../../components/images/fixedCosts.png';
+import Euro from '../../../components/images/EuroSign.png';
+import Plus from '../../../components/images/plus.png';
+import Minus from '../../../components/images/minus.png';
 
 // ----------------------------------------------------------------------
 
@@ -17,26 +26,49 @@ const StyledProductImg = styled('img')({
 });
 
 // ----------------------------------------------------------------------
-/*
-OneSpending.propTypes = {
-  product: PropTypes.object,
-};
-//const { name, cover, price, colors, status, priceSale } = product;
-*/
-export default function OneSpending() {
-  
+
+
+export default function OneSpending({product}) {
+  OneSpending.propTypes = {
+        product: PropTypes.object,
+  };
+
+  const { id, cover, name, price, categories, date, colors, status } = product;
+
+  function getIconOfCategory(category){
+    let iconImage = null
+    if (category === "Food"){
+        iconImage =  <img width="120px" src={Food} alt="Logo" />
+    } else if (category === "Activities"){
+        iconImage = <img width="120px" src={Activities} alt="Logo" />
+    } else {
+        iconImage = <img width="120px" src={FixedCosts} alt="Logo" />
+    }
+    return iconImage
+    
+  }
 
   return (
     <Card>
-      <Box sx={{ position: 'relative',ml: 2  }}>
-          <Box sx={{ position: 'relative',ml: '93%'  }}>
-          <Label
-            variant="filled"
-            color={'info'}
-          >Category
-          </Label>
-          </Box>
-          <p>Hallo</p>
+      <Box sx={{ position: 'relative',ml: 1  }} >
+        <Grid container spacing={2} >
+            <Grid item  >
+                <Box display="flex" justifyContent="flex-end">
+                    {name === "Income" &&  <img width="120px" src={Plus} alt="Logo" />}
+                    {name !== "Income" &&  <img width="120px" src={Minus} alt="Logo" />}
+                </Box>
+            </Grid>
+            <Grid item >
+                <p><b>{name}</b></p>
+                <p>{date}</p>
+                <p style={{textOverflow: 'ellipsis', display: 'inline', whiteSpace: 'nowrap'}} > <img width="20px" src={Euro} alt="Logo" /> {price}</p>
+            </Grid>
+            <Grid item justifyContent="flex-end" alignContent="flex-end"  >
+                <Box  display="flex" justifyContent="flex-end" alignSelf="end" >
+                    {getIconOfCategory(categories)}
+                </Box>
+            </Grid>
+        </Grid>
       </Box>
 
     </Card>
