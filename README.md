@@ -10,6 +10,7 @@ The more they save , the faster the house will be built .
 we used the framework React and build our house Java Script using data provided by the api of interhyp . 
 ## Challenges we ran into
 Finding out how to get the apprpiate properties we needed for our web page . 
+
 Lack of knowledge in the financial industry. 
 ## Accomplishments that we're proud of
  Having a pretty UI and finding a new home for sammy. 
