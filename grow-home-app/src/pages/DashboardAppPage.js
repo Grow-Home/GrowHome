@@ -31,27 +31,34 @@ export default function DashboardAppPage() {
 
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Capital" total={714000}  />
+            <AppWidgetSummary title="Current capital" total={41.000}  />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Monthly Saving" total={131} color="info"/>
+            <AppWidgetSummary title="Monthly Saving" total={1200} color="info"/>
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Time in Months" total={110} color="warning" />
+            <AppWidgetSummary title="Time in Months until grown house" total={110} color="warning" />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary title="Interest Rate" total={234} color="error"  />
           </Grid>
 
-          <Grid item xs={12} md={18} lg={14}>
+          <Grid item xs={12} md={6} lg={4}>
               {/* House Building Blocks  */}
               <Box sx={{ pl:10, pt:2 }} >
                   <CircularStatic/>
               </Box>
+          </Grid>
+          <Grid item xs={12} md={6} lg={8}>
+              <Box sx={{ pl:10, pt:2 }} >
+                  <p>Hallo</p>
+              </Box>
+          </Grid>
 
+          <Grid item xs={12} md={18} lg={14}>
             <AppWebsiteVisits
               title="Website Visits"
               subheader="(+43%) than last year"
