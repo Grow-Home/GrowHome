@@ -46,6 +46,13 @@ export default function DashboardAppPage() {
             <AppWidgetSummary title="Interest Rate" total={234} color="error"  />
           </Grid>
 
+            <Grid item xs={12} md={18} lg={14}>
+                {/* House Building Blocks  */}
+                <Box sx={{ pl:10, pt:2 }} >
+                    <CircularStatic/>
+                </Box>
+            </Grid>
+
           <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
               title="Spendings Breakdown"
