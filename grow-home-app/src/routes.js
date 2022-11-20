@@ -20,7 +20,7 @@ export default function Router() {
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'user', element: <UserPage /> },
-        { path: 'spendings', element: <SpendingPage /> }
+        { path: 'spendings', element: <SpendingPage /> },
       ],
     },
     {
