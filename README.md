@@ -13,14 +13,20 @@ Finding out how to get the apprpiate properties we needed for our web page .
 Lack of knowledge in the financial industry. 
 ## Accomplishments that we're proud of
  Having a pretty UI and building house with sammy. 
+ 
  Managing to have a good team work spirit .
+ 
  Pulling in the all nighter to submit a working prototype. 
+ 
  Having fun and learning something new .
 ## What we learned
 we learned : 
 fast prototyping techniques.
+
 continuous integration. 
+
 splitting the work. 
+
 stress management. 
 ## What's next for GrowHome
 GrowHome has a lot of potential . Data can be downloaded automatically from the user 's account and categorized so the user doesn't have to 
