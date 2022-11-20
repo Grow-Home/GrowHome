@@ -12,7 +12,10 @@ import House4 from './images/house4.png';
 function CircularProgressWithLabel(props) {
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress size={600} variant="determinate" {...props} />
+        <Typography variant="h3" component="div" color="text.secondary">
+            {`${Math.round(props.value)}%`}
+        </Typography>
+      <CircularProgress size={450} variant="determinate" {...props} />
       <Box
         sx={{
           top: 0,
@@ -23,25 +26,24 @@ function CircularProgressWithLabel(props) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          pl:10,
         }}
       >
-        <Typography variant="caption" component="div" color="text.secondary">
-          {`${Math.round(props.value)}%`}
-        </Typography>
+
           {props.value === 0 &&
-                  <img width="70%" src={House0} alt=""/>
+                  <img  width="60%" src={House0} alt=""/>
           }
           {props.value === 25 &&
-              <img width="70%" src={House1} alt=""/>
+              <img width="60%" src={House1} alt=""/>
           }
           {props.value === 50 &&
-              <img width="70%" src={House2} alt=""/>
+              <img width="60%" src={House2} alt=""/>
           }
           {props.value === 75 &&
-              <img width="70%" src={House3} alt=""/>
+              <img width="60%" src={House3} alt=""/>
           }
           {props.value === 100 &&
-              <img width="70%" src={House4} alt=""/>
+              <img width="60%" src={House4} alt=""/>
           }
       </Box>
     </Box>

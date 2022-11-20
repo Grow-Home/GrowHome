@@ -27,32 +27,28 @@ export default function DashboardAppPage() {
 
   return (
     <>
-      <Helmet>
-        <title> Dashboard | Minimal UI </title>
-      </Helmet>
-
-      <Container maxWidth="xl">
+      <Container maxWidth="l">
 
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Weekly Sales" total={714000} icon={'ant-design:android-filled'} />
+            <AppWidgetSummary title="Capital" total={714000}  />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="New Users" total={1352831} color="info" icon={'ant-design:apple-filled'} />
+            <AppWidgetSummary title="Monthly Saving" total={131} color="info"/>
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Item Orders" total={1723315} color="warning" icon={'ant-design:windows-filled'} />
+            <AppWidgetSummary title="Time in Months" total={110} color="warning" />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Bug Reports" total={234} color="error" icon={'ant-design:bug-filled'} />
+            <AppWidgetSummary title="Interest Rate" total={234} color="error"  />
           </Grid>
 
           <Grid item xs={12} md={18} lg={14}>
               {/* House Building Blocks  */}
-              <Box sx={{ pl:30 }} >
+              <Box sx={{ pl:10, pt:2 }} >
                   <CircularStatic/>
               </Box>
 
