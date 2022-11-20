@@ -2,20 +2,20 @@
   "numberOfResults": 2,
   "caseDto": {
     "venture": {
-      "reason": "KaufNeu",
-      "priceBuilding": 0,
+      "reason": "KaufBest",
+      "priceBuilding": 500000,
       "shownFunding": {
-        "equityCash": 0,
+        "equityCash": 50000,
         "additionalPriorityLoan": 0,
         "payoutDate": "2022-11-19",
         "loans": [
           {
-            "amount": 50000,
-            "fullRepayment": true,
-            "amortisation": 0,
-            "maturity": 0,
-            "desiredTotalTimeInYears": 5,
-            "desiredRepayment": 80000
+            "amount": 495000,
+            "fullRepayment": false,
+            "amortisation": 2,
+            "maturity": 15,
+            "desiredTotalTimeInYears": 0,
+            "desiredRepayment": 0
           }
         ]
       },
@@ -34,9 +34,9 @@
       "costsOutside": 0
     },
     "estate": {
-      "zip": "string",
-      "city": "string",
-      "federalState": "string",
+      "zip": "80809",
+      "city": "München",
+      "federalState": "DE-BY",
       "combiType": "Wohnung",
       "utilization": "eigen",
       "construction": "Massiv",
