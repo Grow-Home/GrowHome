@@ -68,8 +68,8 @@ export default function DashboardAppPage() {
               title="Spendings Breakdown"
               chartData={[
                 { label: 'Food', value: 4344 },
-                { label: 'Rent', value: 5435 },
-                { label: 'Clothes', value: 1443 },
+                { label: 'Clothes', value: 5435 },
+                { label: 'Activities', value: 1443 },
                 { label: 'Fixed Cost', value: 4443 },
               ]}
               chartColors={[
