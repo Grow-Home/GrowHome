@@ -56,63 +56,21 @@ export default function DashboardAppPage() {
             <AppWidgetSummary title="Interest Rate" total={3.67} color="error"  />
           </Grid>
 
-          
-
-          <Grid item xs={12} md={6} lg={8}>
-              {/* House Building Blocks  */}
-              <Box sx={{ pl:10, pt:2 }} >
-                  <CircularStatic/>
-              </Box>
-          </Grid>
-          
-          <Grid item xs={12} md={18} lg={14}>
-            <AppWebsiteVisits
-              title="Website Visits"
-              subheader="(+43%) than last year"
-              chartLabels={[
-                '01/01/2003',
-                '02/01/2003',
-                '03/01/2003',
-                '04/01/2003',
-                '05/01/2003',
-                '06/01/2003',
-                '07/01/2003',
-                '08/01/2003',
-                '09/01/2003',
-                '10/01/2003',
-                '11/01/2003',
-              ]}
-              chartData={[
-                {
-                  name: 'Team A',
-                  type: 'column',
-                  fill: 'solid',
-                  data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
-                },
-                {
-                  name: 'Team B',
-                  type: 'area',
-                  fill: 'gradient',
-                  data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
-                },
-                {
-                  name: 'Team C',
-                  type: 'line',
-                  fill: 'solid',
-                  data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
-                },
-              ]}
-            />
-          </Grid>
+            <Grid item xs={12} md={18} lg={14}>
+                {/* House Building Blocks  */}
+                <Box sx={{ pl:10, pt:2 }} >
+                    <CircularStatic/>
+                </Box>
+            </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
               title="Spendings Breakdown"
               chartData={[
                 { label: 'Food', value: 4344 },
+                { label: 'Rent', value: 5435 },
                 { label: 'Clothes', value: 1443 },
-                { label: 'Activities', value: 4443 },
-                { label: 'Fixed Cost', value: 5435 },
+                { label: 'Fixed Cost', value: 4443 },
               ]}
               chartColors={[
                 theme.palette.primary.main,
@@ -125,19 +83,19 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AppConversionRates
-              title="Conversion Rates"
-              subheader="(+43%) than last year"
+              title="How will your loan change?"
+              subheader="10 years of saving -> 1/3 of the loan is gone"
               chartData={[
-                { label: 'Italy', value: 400 },
-                { label: 'Japan', value: 430 },
-                { label: 'China', value: 448 },
-                { label: 'Canada', value: 470 },
-                { label: 'France', value: 540 },
-                { label: 'Germany', value: 580 },
-                { label: 'South Korea', value: 690 },
-                { label: 'Netherlands', value: 1100 },
-                { label: 'United States', value: 1200 },
-                { label: 'United Kingdom', value: 1380 },
+                { label: '01/12/2022', value: 299025 },
+                { label: '01/12/2023', value: 287318 },
+                { label: '01/12/2024', value: 275600 },
+                { label: '01/12/2025', value: 263870 },
+                { label: '01/12/2026', value: 252129 },
+                { label: '01/12/2027', value: 240376 },
+                { label: '01/12/2028', value: 228611 },
+                { label: '01/12/2029', value: 216834 },
+                { label: '01/12/2030', value: 205045 },
+                { label: '01/12/2031', value: 193245 },
               ]}
             />
           </Grid>
@@ -154,7 +112,7 @@ export default function DashboardAppPage() {
                   'Don\'t scroll through the shopping apps. You going to end up buying something for sure!',
                   'Bring back the student spirit, bring back Pasta with Pesto.',
                   'Bring the vintage style back. Grab yourself something from the thrift shop.',
-                  
+
                 ][index],
                 type: `order${index + 1}`,
                 time: faker.date.past(),
