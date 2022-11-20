@@ -1,9 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { faker } from '@faker-js/faker';
 import React from 'react';
+import PropTypes from 'prop-types';
+
 // @mui
 import { useTheme } from '@mui/material/styles';
-import {Grid, Container, Box} from '@mui/material';
+import {Grid, Container, Box, Card, Typography, List, ListItem, ListItemButton, ListItemIcon, ListItemText} from '@mui/material';
 // components
 import Iconify from '../components/iconify';
 // sections
@@ -21,6 +23,13 @@ import {
 import CircularStatic from "../components/radial-progress";
 
 // ----------------------------------------------------------------------
+DashboardAppPage.propTypes = {
+  color: PropTypes.string,
+  icon: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired,
+  sx: PropTypes.object,
+};
 
 export default function DashboardAppPage() {
   const theme = useTheme();
@@ -31,7 +40,7 @@ export default function DashboardAppPage() {
 
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Current capital" total={41.000}  />
+            <AppWidgetSummary title="Current capital" total={41000}  />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
@@ -39,25 +48,22 @@ export default function DashboardAppPage() {
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Time in Months until grown house" total={110} color="warning" />
+            <AppWidgetSummary title="Time in Months until grown house" total={8} color="warning" />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Interest Rate" total={234} color="error"  />
+            <AppWidgetSummary title="Interest Rate" total={3.67} color="error"  />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={4}>
+          
+
+          <Grid item xs={12} md={6} lg={8}>
               {/* House Building Blocks  */}
               <Box sx={{ pl:10, pt:2 }} >
                   <CircularStatic/>
               </Box>
           </Grid>
-          <Grid item xs={12} md={6} lg={8}>
-              <Box sx={{ pl:10, pt:2 }} >
-                  <p>Hallo</p>
-              </Box>
-          </Grid>
-
+          
           <Grid item xs={12} md={18} lg={14}>
             <AppWebsiteVisits
               title="Website Visits"
@@ -103,9 +109,9 @@ export default function DashboardAppPage() {
               title="Spendings Breakdown"
               chartData={[
                 { label: 'Food', value: 4344 },
-                { label: 'Rent', value: 5435 },
                 { label: 'Clothes', value: 1443 },
-                { label: 'Fixed Cost', value: 4443 },
+                { label: 'Activities', value: 4443 },
+                { label: 'Fixed Cost', value: 5435 },
               ]}
               chartColors={[
                 theme.palette.primary.main,
@@ -163,23 +169,29 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={4}>
             <AppOrderTimeline
-              title="Order Timeline"
-              list={[...Array(5)].map((_, index) => ({
+              title="Tips for saving money!"
+              list={[...Array(4)].map((_, index) => ({
                 id: faker.datatype.uuid(),
                 title: [
-                  '1983, orders, $4220',
-                  '12 Invoices have been paid',
-                  'Order #37745 from September',
-                  'New order placed #XF-2356',
-                  'New order placed #XF-2346',
+                  'Drink coffee at home. Expection: HackaTUM :D',
+                  'Don\'t scroll through the shopping apps. You going to end up buying something for sure!',
+                  'Bring back the student spirit, bring back Pasta with Pesto.',
+                  'Bring the vintage style back. Grab yourself something from the thrift shop.',
+                  
                 ][index],
                 type: `order${index + 1}`,
                 time: faker.date.past(),
               }))}
             />
           </Grid>
-
+          <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary title="You saved last month 1300 €.
+                  Your current mortgage rate would be 1180€.
+                  So get going and try to reduce coffee !" total={"Monthly mortgage rate"}  />
+          </Grid>
+          
           <Grid item xs={12} md={6} lg={4}>
+            
             <AppTrafficBySite
               title="Traffic by Site"
               list={[

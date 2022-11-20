@@ -63,7 +63,7 @@ const PRODUCT_COLOR = ['#00AB55', '#000000', '#FFFFFF', '#FFC0CB', '#FF4842', '#
 
 // ----------------------------------------------------------------------
 
-const products = [...Array(24)].map((_, index) => {
+const products = [...Array(12)].map((_, index) => {
   const setIndex = index + 1;
 
   return {

@@ -53,22 +53,19 @@ function OrderItem({ item, isLast }) {
       <TimelineSeparator>
         <TimelineDot
           color={
-            (type === 'order1' && 'primary') ||
-            (type === 'order2' && 'success') ||
-            (type === 'order3' && 'info') ||
-            (type === 'order4' && 'warning') ||
+            (type === 'order1' && 'warning') ||
+            (type === 'order2' && 'info') ||
+            (type === 'order3' && 'primary') ||
+            (type === 'order4' && 'error') ||
             'error'
           }
+  
         />
         {isLast ? null : <TimelineConnector />}
       </TimelineSeparator>
 
       <TimelineContent>
         <Typography variant="subtitle2">{title}</Typography>
-
-        <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-          {fDateTime(time)}
-        </Typography>
       </TimelineContent>
     </TimelineItem>
   );
