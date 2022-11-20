@@ -21,6 +21,7 @@ Lack of knowledge in the financial industry.
  Having fun and learning something new .
 ## What we learned
 we learned : 
+
 fast prototyping techniques.
 
 continuous integration. 
