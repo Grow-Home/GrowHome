@@ -1,5 +1,6 @@
 {
-  "numberOfResults": 2,
+  "useCustomInterestRate": true,
+  "userInterest": 0,
   "caseDto": {
     "venture": {
       "reason": "KaufNeu",
@@ -7,12 +8,12 @@
       "shownFunding": {
         "equityCash": 0,
         "additionalPriorityLoan": 0,
-        "payoutDate": "2022-11-19",
+        "payoutDate": "2027-11-19",
         "loans": [
           {
             "amount": 50000,
             "fullRepayment": true,
-            "amortisation": 0,
+            "amortisation": 1,
             "maturity": 0,
             "desiredTotalTimeInYears": 5,
             "desiredRepayment": 80000
@@ -102,5 +103,12 @@
     ],
     "calculateScore": true,
     "h-captcha-response": "string"
-  }
+  },
+  "specialRepayments": [
+    {
+      "date": "2022-11-19",
+      "amount": 0,
+      "recurringCount": 0
+    }
+  ]
 }
