@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 
 // @mui
 import { useTheme } from '@mui/material/styles';
-import {Grid, Container, Box, Card, Typography, List, ListItem, ListItemButton, ListItemIcon, ListItemText} from '@mui/material';
+import { Timeline, TimelineDot, TimelineItem, TimelineContent, TimelineSeparator, TimelineConnector } from '@mui/lab';
+import {Grid, Container, Box, Card, CardHeader, CardContent, Typography, List, ListItem, ListItemButton, ListItemIcon, ListItemText} from '@mui/material';
 // components
 import Iconify from '../components/iconify';
 // sections
@@ -141,26 +142,15 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={8}>
-            <AppNewsUpdate
-              title="News Update"
-              list={[...Array(5)].map((_, index) => ({
-                id: faker.datatype.uuid(),
-                title: faker.name.jobTitle(),
-                description: faker.name.jobTitle(),
-                image: `/assets/images/covers/cover_${index + 1}.jpg`,
-                postedAt: faker.date.recent(),
-              }))}
-            />
-          </Grid>
 
-          <Grid item xs={12} md={6} lg={4}>
+
+          <Grid item xs={12} md={6} lg={8}>
             <AppOrderTimeline
               title="Tips for saving money!"
               list={[...Array(4)].map((_, index) => ({
                 id: faker.datatype.uuid(),
                 title: [
-                  'Drink coffee at home. Expection: HackaTUM :D',
+                  'Drink coffee at home ☕. Exception: HackaTUM :D ',
                   'Don\'t scroll through the shopping apps. You going to end up buying something for sure!',
                   'Bring back the student spirit, bring back Pasta with Pesto.',
                   'Bring the vintage style back. Grab yourself something from the thrift shop.',
@@ -171,14 +161,31 @@ export default function DashboardAppPage() {
               }))}
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="You saved last month 1300 €.
-                  Your current mortgage rate would be 1180€.
-                  So get going and try to reduce coffee !" total={"Monthly mortgage rate"}  />
-          </Grid>
           
-        </Grid>
-      </Container>
+      <Grid item xs={12} md={6} lg={4}>
+          <Card >
+            <CardHeader title={"Monthly mortgage rate"}  />
+
+          <CardContent
+            sx={{
+              '& .MuiTimelineItem-missingOppositeContent:before': {
+                display: 'none',
+              },
+            }}
+          >
+            <Timeline>
+              You saved last month 1300 €.
+              Your current mortgage rate would be 1180€.
+              So get going !
+            </Timeline>
+          </CardContent>
+          </Card>
+      </Grid>
+
+
+          
+      </Grid>
+   </Container>
     </>
   );
 }
