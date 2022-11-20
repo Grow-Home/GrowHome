@@ -5,6 +5,7 @@ import { sample } from 'lodash';
 
 const PRODUCT_NAME = [
   'REWE',
+  'Income',
   'Lidl',
   'TUM Cafeteria',
   'TUM Mensa',
@@ -18,6 +19,7 @@ const PRODUCT_NAME = [
 ];
 const PRODUCT_CATEGORIES = [
   'Food',
+  'Income',
   'Food',
   'Food',
   'Food',
@@ -31,6 +33,7 @@ const PRODUCT_CATEGORIES = [
 ];
 const PRODUCT_PRICE = [
   '28.50',
+  '3000',
   '7.60',
   '5.50',
   '12.70',
@@ -45,15 +48,16 @@ const PRODUCT_PRICE = [
 const PRODUCT_DATE = [
   '2022-11-19',
   '2022-11-18',
+  '2022-11-18',
   '2022-11-16',
   '2022-11-13',
-  '2022-11-13',
-  '2022-11-13',
-  '2022-11-13',
-  '2022-11-13',
-  '2022-11-13',
-  '2022-11-13',
-  '2022-11-13'
+  '2022-11-15',
+  '2022-11-14',
+  '2022-11-17',
+  '2022-11-18',
+  '2022-11-12',
+  '2022-11-11',
+  '2022-11-19'
 ];
 const PRODUCT_COLOR = ['#00AB55', '#000000', '#FFFFFF', '#FFC0CB', '#FF4842', '#1890FF', '#94D82D', '#FFC107'];
 
